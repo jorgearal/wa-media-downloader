@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <h1>WhatsApp Media Downloader</h1>
+
+  <button id="openWa" class="secondary">Open WhatsApp Web</button>
+
+  <label for="chat">Chat</label>
+  <input id="chat" list="chatList" placeholder="Exact chat name" autocomplete="off">
+  <datalist id="chatList"></datalist>
+
+  <label for="folder">Folder inside Downloads</label>
+  <input id="folder" placeholder="DogDaycare">
+  <p class="hint">Saved to ~/Downloads/<span id="folderPreview">DogDaycare</span>/YYYY-MM-DD/</p>
+
+  <label class="check"><input type="checkbox" id="retry" checked> Retry items that fail to load (up to 3 tries)</label>
+  <p class="hint">Unchecked: an item that doesn't download on the first try is skipped.</p>
+
+  <div class="row">
+    <button id="start">Download new media</button>
+    <button id="stop" class="danger" disabled>Stop</button>
+  </div>
+
+  <p id="status" class="status"></p>
+
+  <p class="hint">Turn off Chrome's “Ask where to save each file before downloading” setting, or Chrome will show a save dialog for every file.</p>
+  <button id="reset" class="link">Forget download history for this chat</button>
+
+  <script src="popup.js"></script>
+</body>
+</html>

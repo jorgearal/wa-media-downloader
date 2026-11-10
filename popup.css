@@ -1,0 +1,15 @@
+body { width: 300px; margin: 0; padding: 14px; font: 13px/1.4 system-ui, sans-serif; color: #111b21; }
+h1 { font-size: 15px; margin: 0 0 12px; }
+label { display: block; margin: 12px 0 4px; font-weight: 600; }
+input { box-sizing: border-box; width: 100%; padding: 7px 8px; border: 1px solid #c8ced2; border-radius: 6px; font: inherit; }
+button { padding: 8px 10px; border: 0; border-radius: 6px; font: inherit; cursor: pointer; background: #00a884; color: #fff; }
+button:disabled { opacity: .5; cursor: default; }
+button.secondary { width: 100%; background: #e9edef; color: #111b21; }
+button.danger { background: #d93f3f; }
+button.link { background: none; color: #667781; padding: 0; text-decoration: underline; font-size: 12px; }
+label.check { display: flex; align-items: center; gap: 6px; font-weight: 400; }
+label.check input { width: auto; margin: 0; }
+.row { display: flex; gap: 8px; margin-top: 14px; }
+.row #start { flex: 1; }
+.hint { color: #667781; font-size: 12px; margin: 6px 0; }
+.status { min-height: 1.4em; margin: 10px 0; font-weight: 600; }

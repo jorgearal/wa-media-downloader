@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "WhatsApp Media Downloader",
+  "version": "1.0.0",
+  "description": "Download new photos and videos from a WhatsApp Web chat into a dated folder under Downloads.",
+  "author": { "email": "jorge.aral@live.com" },
+  "homepage_url": "https://github.com/jorgearal/wa-media-downloader",
+  "permissions": ["downloads", "storage", "tabs", "scripting"],
+  "host_permissions": ["https://web.whatsapp.com/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": ["https://web.whatsapp.com/*"],
+      "js": ["selectors.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_popup": "popup.html", "default_title": "WhatsApp Media Downloader" }
+}
