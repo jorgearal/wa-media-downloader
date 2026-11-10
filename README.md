@@ -4,6 +4,27 @@ Chrome extension that downloads the photos and videos from a WhatsApp Web chat i
 `~/Downloads/<Folder>/<YYYY-MM-DD>/`, keeping WhatsApp's original filenames.
 It remembers what it already saved, so you can re-run it any time and only new (or previously missed) media is downloaded.
 
+<p align="center">
+  <img src="docs/screenshots/popup-running.png" alt="Extension popup during a run: 12 new, 48 already saved, 1 failed" width="300">
+  &nbsp;&nbsp;
+  <img src="docs/screenshots/popup-done.png" alt="Extension popup after a finished run: 14 new, 112 already saved, 3 failed" width="300">
+</p>
+<p align="center"><em>During a run (left) and after it reaches the oldest media (right). Sample data.</em></p>
+
+Saved files end up grouped by the day they were sent:
+
+```
+~/Downloads/DogDaycare/
+├── 2026-11-07/
+│   ├── WhatsApp Image 2026-11-07 at 09.14.22.jpeg
+│   └── WhatsApp Video 2026-11-07 at 16.02.51.mp4
+├── 2026-11-08/
+│   └── WhatsApp Image 2026-11-08 at 10.40.03.jpeg
+└── 2026-11-09/
+    ├── WhatsApp Image 2026-11-09 at 15.25.10.jpeg
+    └── WhatsApp Video 2026-11-09 at 15.25.12.mp4
+```
+
 ## Install
 1. Clone or download this repository.
 2. Go to `chrome://extensions` and turn on **Developer mode**.
